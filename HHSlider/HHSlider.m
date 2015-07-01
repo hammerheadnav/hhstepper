@@ -7,39 +7,25 @@
 
 @implementation HHSlider {
     HHSliderTrackLayer *_trackLayer;
-    HHSliderStepLayer *_step0Layer;
-    HHSliderStepLayer *_step1Layer;
-    HHSliderStepLayer *_step2Layer;
-    HHSliderStepLayer *_step3Layer;
+    NSArray *_steps;
     HHCycleLayer *_cycleLayer;
 
-    int selectedStep;
+    NSUInteger selectedStep;
     float stepWidth;
     float trackMargin;
     float trackLength;
-    CGPoint _previousTouchPoint;
-
     BOOL animating;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame totalSteps:(NSUInteger) numberOfSteps defaultStep:(NSUInteger) defaultStep {
     self = [super initWithFrame:frame];
     if (self) {
         _trackLayer = [HHSliderTrackLayer layer];
         _trackLayer.slider = self;
         [self.layer addSublayer:_trackLayer];
 
-        _step0Layer = [HHSliderStepLayer layer];
-        [self.layer addSublayer:_step0Layer];
-
-        _step1Layer = [HHSliderStepLayer layer];
-        [self.layer addSublayer:_step1Layer];
-
-        _step2Layer = [HHSliderStepLayer layer];
-        [self.layer addSublayer:_step2Layer];
-
-        _step3Layer = [HHSliderStepLayer layer];
-        [self.layer addSublayer:_step3Layer];
+        _steps = [self createSteps:numberOfSteps];
+        selectedStep = defaultStep;
 
         _cycleLayer = [HHCycleLayer layer];
         _cycleLayer.slider = self;
@@ -51,16 +37,25 @@
     return self;
 }
 
+- (NSArray *)createSteps:(NSUInteger)numberOfSteps {
+    NSMutableArray *steps = [NSMutableArray new];
+    for(int i =0 ;i < numberOfSteps; i++){
+        HHSliderStepLayer *step = [HHSliderStepLayer layer];
+        [self.layer addSublayer:step];
+        [steps addObject:step];
+    }
+    return  steps;
+}
+
+
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-    _previousTouchPoint = [touch locationInView:self];
-    if(CGRectContainsPoint(_step0Layer.frame, _previousTouchPoint)){
-        selectedStep = 0;
-    } else if(CGRectContainsPoint(_step1Layer.frame, _previousTouchPoint)){
-        selectedStep = 1;
-    } else if(CGRectContainsPoint(_step2Layer.frame, _previousTouchPoint)){
-        selectedStep = 2;
-    } else if(CGRectContainsPoint(_step3Layer.frame, _previousTouchPoint)){
-        selectedStep = 3;
+    CGPoint touchPoint = [touch locationInView:self];
+    for(NSUInteger i=0; i<_steps.count; i++){
+        HHSliderStepLayer *step = _steps[i];
+        if(CGRectContainsPoint(step.frame, touchPoint)){
+            selectedStep = i;
+            break;
+        }
     }
 
     return YES;
@@ -97,7 +92,6 @@
 
 - (void)setLayerFrames {
     stepWidth = self.bounds.size.height / 2;
-
     trackMargin = 20;
     CGFloat trackHeight = self.bounds.size.height / 8;
     trackLength = (self.bounds.size.width - stepWidth) - trackMargin * 2;
@@ -108,24 +102,17 @@
 
 
     CGFloat y = (self.bounds.size.height / 2) - stepWidth / 2;
-    _step0Layer.frame = CGRectMake([self positionForStepIndex:0], y, stepWidth, stepWidth);
-    [_step0Layer setNeedsDisplay];
-
-    _step1Layer.frame = CGRectMake([self positionForStepIndex:1], y, stepWidth, stepWidth);
-    [_step1Layer setNeedsDisplay];
-
-    _step2Layer.frame = CGRectMake([self positionForStepIndex:2], y, stepWidth, stepWidth);
-    [_step2Layer setNeedsDisplay];
-
-    _step3Layer.frame = CGRectMake([self positionForStepIndex:3], y, stepWidth, stepWidth);
-    [_step3Layer setNeedsDisplay];
-
+    for(NSUInteger i=0; i<_steps.count; i++){
+        HHSliderStepLayer *step = _steps[i];
+        step.frame = CGRectMake([self positionForStepIndex:i], y, stepWidth, stepWidth);
+        [step setNeedsDisplay];
+    }
     _cycleLayer.frame = CGRectMake([self positionForStepIndex:selectedStep], y, stepWidth, stepWidth);
     [_cycleLayer setNeedsDisplay];
 }
 
-- (float) positionForStepIndex: (int) index{
-       float stepSpacing = trackLength / 3;
+- (float) positionForStepIndex: (NSUInteger) index{
+       float stepSpacing = trackLength / (_steps.count - 1);
        return trackMargin + index * stepSpacing;
 }
 

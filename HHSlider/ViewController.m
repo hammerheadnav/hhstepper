@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGRect rect = CGRectMake(20, 20, self.view.frame.size.width - 40, 50);
-    slider = [[HHSlider alloc] initWithFrame:rect];
+    slider = [[HHSlider alloc] initWithFrame:rect totalSteps:5 defaultStep:2];
     [self.view addSubview:slider];
 }
 

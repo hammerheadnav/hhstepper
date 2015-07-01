@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol CAAnimationDelegate;
-
 @interface HHSlider : UIControl
 
+- (instancetype)initWithFrame:(CGRect)frame totalSteps:(NSUInteger)numberOfSteps defaultStep:(NSUInteger)defaultStep;
 @end
