@@ -7,16 +7,22 @@
 //
 
 #import "ViewController.h"
+#import "HHSlider.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    HHSlider *slider;
+}
 
 @end
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    CGRect rect = CGRectMake(20, 20, self.view.frame.size.width - 40, 50);
+    slider = [[HHSlider alloc] initWithFrame:rect];
+    [self.view addSubview:slider];
 }
 
 - (void)didReceiveMemoryWarning {
