@@ -8,9 +8,10 @@
 
 #import "ViewController.h"
 #import "HHSlider.h"
+#import "HHSliderWithTitle.h"
 
 @interface ViewController () {
-    HHSlider *slider;
+    HHSliderWithTitle *slider;
 }
 
 @end
@@ -20,8 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGRect rect = CGRectMake(20, 20, self.view.frame.size.width - 40, 50);
-    slider = [[HHSlider alloc] initWithFrame:rect totalSteps:5 defaultStep:2];
+    CGRect rect = CGRectMake(20, 20, self.view.frame.size.width - 40, 100);
+    slider = [[HHSliderWithTitle alloc] initWithFrame:rect totalSteps:5 defaultStep:2];
+    [slider setLabels:@[@"strict", @"okayish", @"default", @"linient", @"free"]];
     [self.view addSubview:slider];
 }
 

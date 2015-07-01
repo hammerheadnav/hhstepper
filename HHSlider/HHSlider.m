@@ -37,6 +37,12 @@
     return self;
 }
 
+- (CGPoint)positionOfStepAtIndex:(NSUInteger)index {
+    HHSliderStepLayer *step = _steps[index];
+    return step.position;
+}
+
+
 - (NSArray *)createSteps:(NSUInteger)numberOfSteps {
     NSMutableArray *steps = [NSMutableArray new];
     for(int i =0 ;i < numberOfSteps; i++){

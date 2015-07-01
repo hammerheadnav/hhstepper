@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class HHSliderStepLayer;
+
 @interface HHSlider : UIControl
 
 - (instancetype)initWithFrame:(CGRect)frame totalSteps:(NSUInteger)numberOfSteps defaultStep:(NSUInteger)defaultStep;
+
+- (CGPoint) positionOfStepAtIndex:(NSUInteger) index;
 @end
