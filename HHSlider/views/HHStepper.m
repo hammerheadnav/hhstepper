@@ -3,11 +3,11 @@
 // Copyright (c) 2015 Devarajan. All rights reserved.
 //
 
-#import "HHSlider.h"
+#import "HHStepper.h"
 
 
-@implementation HHSlider {
-    HHSliderControl *_sliderControl;
+@implementation HHStepper {
+    HHStepperControl *_sliderControl;
     UIView *_labelContaniner;
 }
 
@@ -28,7 +28,7 @@
 - (void)setFrames:(NSArray *)labels {
     int margin = 20;
     CGRect rect = CGRectMake(margin, margin, self.frame.size.width - margin * 2, self.frame.size.height / 2);
-    _sliderControl = [[HHSliderControl alloc] initWithFrame:rect totalSteps:labels.count defaultStep:0];
+    _sliderControl = [[HHStepperControl alloc] initWithFrame:rect totalSteps:labels.count defaultStep:0];
     _sliderControl.delegate = self;
     _labelContaniner = [[UIView alloc] initWithFrame:CGRectMake(margin,( self.frame.size.height / 2), self.frame.size.width - margin * 2, self.frame.size.height / 2)];
 }

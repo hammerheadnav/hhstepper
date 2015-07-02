@@ -1,12 +1,12 @@
 
 
-#import "HHSliderControl.h"
+#import "HHStepperControl.h"
 #import "HHCycleLayer.h"
-#import "HHSliderTrackLayer.h"
-#import "HHSliderStepLayer.h"
+#import "HHTrackLayer.h"
+#import "HHStepLayer.h"
 
-@implementation HHSliderControl {
-    HHSliderTrackLayer *_trackLayer;
+@implementation HHStepperControl {
+    HHTrackLayer *_trackLayer;
     NSArray *_steps;
     HHCycleLayer *_cycleLayer;
 
@@ -20,7 +20,7 @@
 - (instancetype)initWithFrame:(CGRect)frame totalSteps:(NSUInteger) numberOfSteps defaultStep:(NSUInteger) defaultStep {
     self = [super initWithFrame:frame];
     if (self) {
-        _trackLayer = [HHSliderTrackLayer layer];
+        _trackLayer = [HHTrackLayer layer];
         _trackLayer.slider = self;
         [self.layer addSublayer:_trackLayer];
 
@@ -38,7 +38,7 @@
 }
 
 - (CGPoint)positionOfStepAtIndex:(NSUInteger)index {
-    HHSliderStepLayer *step = _steps[index];
+    HHStepLayer *step = _steps[index];
     return step.position;
 }
 
@@ -46,7 +46,7 @@
 - (NSArray *)createSteps:(NSUInteger)numberOfSteps {
     NSMutableArray *steps = [NSMutableArray new];
     for(int i =0 ;i < numberOfSteps; i++){
-        HHSliderStepLayer *step = [HHSliderStepLayer layer];
+        HHStepLayer *step = [HHStepLayer layer];
         [self.layer addSublayer:step];
         [steps addObject:step];
     }
@@ -57,7 +57,7 @@
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint touchPoint = [touch locationInView:self];
     for(NSUInteger i=0; i<_steps.count; i++){
-        HHSliderStepLayer *step = _steps[i];
+        HHStepLayer *step = _steps[i];
         if(CGRectContainsPoint(step.frame, touchPoint)){
             if(selectedStep == i) {
                 return NO;
@@ -117,7 +117,7 @@
 
     CGFloat y = (self.bounds.size.height / 2) - stepWidth / 2;
     for(NSUInteger i=0; i<_steps.count; i++){
-        HHSliderStepLayer *step = _steps[i];
+        HHStepLayer *step = _steps[i];
         step.frame = CGRectMake([self positionForStepIndex:i], y, stepWidth, stepWidth);
         [step setNeedsDisplay];
     }

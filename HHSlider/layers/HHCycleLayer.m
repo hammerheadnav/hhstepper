@@ -4,7 +4,7 @@
 //
 
 #import "HHCycleLayer.h"
-#import "HHSliderControl.h"
+#import "HHStepperControl.h"
 
 
 @implementation HHCycleLayer {

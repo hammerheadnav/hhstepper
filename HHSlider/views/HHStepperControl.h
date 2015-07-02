@@ -1,6 +1,6 @@
 //
-//  HHSliderControl.h
-//  HHSliderControl
+//  HHStepperControl.h
+//  HHStepperControl
 //
 //  Created by Devarajan on 01/07/15.
 //  Copyright (c) 2015 Devarajan. All rights reserved.
@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class HHSliderStepLayer;
+@class HHStepLayer;
 @protocol HHSliderDelegate;
 
 @protocol HHSliderControlDelegate <NSObject>
 - (void) didSelectStepAtIndex:(NSUInteger) index;
 @end
 
-@interface HHSliderControl : UIControl
+@interface HHStepperControl : UIControl
 
 @property (weak, nonatomic) id <HHSliderControlDelegate> delegate;
 

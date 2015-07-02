@@ -3,10 +3,10 @@
 // Copyright (c) 2015 Devarajan. All rights reserved.
 //
 
-#import "HHSliderStepLayer.h"
-#import "HHSliderControl.h"
+#import "HHStepLayer.h"
+#import "HHStepperControl.h"
 
-@implementation HHSliderStepLayer {
+@implementation HHStepLayer {
 
 }
 

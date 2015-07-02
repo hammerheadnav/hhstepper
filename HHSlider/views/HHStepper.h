@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIView.h>
-#import "HHSliderControl.h"
+#import "HHStepperControl.h"
 
 @class Step;
 
@@ -13,7 +13,7 @@
 - (void)didSelectStepWithLabel:(NSString *)label atIndex:(NSUInteger)index;
 @end
 
-@interface HHSlider : UIView <HHSliderControlDelegate>
+@interface HHStepper : UIView <HHSliderControlDelegate>
 
 @property (weak, nonatomic) id <HHSliderDelegate> delegate;
 @property(strong, nonatomic) NSArray *labels;

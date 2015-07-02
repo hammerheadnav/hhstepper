@@ -4,7 +4,7 @@
 @class HHStepperControl;
 
 
-@interface HHCycleLayer : CALayer
+@interface HHTrackLayer : CALayer
 
 @property (weak) HHStepperControl *slider;
 

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EFEE0E4E05CBD03931AB14A /* HHSliderStepLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEEFAF32BD7BD9C3D2DAB7 /* HHSliderStepLayer.m */; };
-		2EFEE77C0E08AF57F68486D0 /* HHSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEE5331758DE09FDCAE9F8 /* HHSlider.m */; };
+		2EFEE0E4E05CBD03931AB14A /* HHStepLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEEFAF32BD7BD9C3D2DAB7 /* HHStepLayer.m */; };
+		2EFEE77C0E08AF57F68486D0 /* HHStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEE5331758DE09FDCAE9F8 /* HHStepper.m */; };
 		2EFEEC2F39C9B541263C3259 /* HHCycleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEE54E230BA2A470B12A8A /* HHCycleLayer.m */; };
-		2EFEEE965A62E3DB2C38E182 /* HHSliderTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEE1EF4368550BBCCCBFF8 /* HHSliderTrackLayer.m */; };
-		2EFEEEF1A1539F3E02D19666 /* HHSliderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEE300DFF48539B31D8069 /* HHSliderControl.m */; };
+		2EFEEE965A62E3DB2C38E182 /* HHTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEE1EF4368550BBCCCBFF8 /* HHTrackLayer.m */; };
+		2EFEEEF1A1539F3E02D19666 /* HHStepperControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEE300DFF48539B31D8069 /* HHStepperControl.m */; };
 		D744BD7F1B44190A0073A486 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D744BD7E1B44190A0073A486 /* main.m */; };
 		D744BD821B44190A0073A486 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D744BD811B44190A0073A486 /* AppDelegate.m */; };
 		D744BD851B44190A0073A486 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D744BD841B44190A0073A486 /* ViewController.m */; };
@@ -33,16 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2EFEE06DAC7CECC48C94B7B4 /* HHSliderTrackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSliderTrackLayer.h; sourceTree = "<group>"; };
-		2EFEE1EF4368550BBCCCBFF8 /* HHSliderTrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSliderTrackLayer.m; sourceTree = "<group>"; };
-		2EFEE300DFF48539B31D8069 /* HHSliderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSliderControl.m; sourceTree = "<group>"; };
-		2EFEE377A104911768714C54 /* HHSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSlider.h; sourceTree = "<group>"; };
-		2EFEE5331758DE09FDCAE9F8 /* HHSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSlider.m; sourceTree = "<group>"; };
+		2EFEE06DAC7CECC48C94B7B4 /* HHTrackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTrackLayer.h; sourceTree = "<group>"; };
+		2EFEE1EF4368550BBCCCBFF8 /* HHTrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHTrackLayer.m; sourceTree = "<group>"; };
+		2EFEE300DFF48539B31D8069 /* HHStepperControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHStepperControl.m; sourceTree = "<group>"; };
+		2EFEE377A104911768714C54 /* HHStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHStepper.h; sourceTree = "<group>"; };
+		2EFEE5331758DE09FDCAE9F8 /* HHStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHStepper.m; sourceTree = "<group>"; };
 		2EFEE54E230BA2A470B12A8A /* HHCycleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCycleLayer.m; sourceTree = "<group>"; };
-		2EFEE5F88170A0C2976EA5DB /* HHSliderStepLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSliderStepLayer.h; sourceTree = "<group>"; };
+		2EFEE5F88170A0C2976EA5DB /* HHStepLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHStepLayer.h; sourceTree = "<group>"; };
 		2EFEE88307E7B015C90C7CAD /* HHCycleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCycleLayer.h; sourceTree = "<group>"; };
-		2EFEE9AECCC17C7C9C46299F /* HHSliderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSliderControl.h; sourceTree = "<group>"; };
-		2EFEEFAF32BD7BD9C3D2DAB7 /* HHSliderStepLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSliderStepLayer.m; sourceTree = "<group>"; };
+		2EFEE9AECCC17C7C9C46299F /* HHStepperControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHStepperControl.h; sourceTree = "<group>"; };
+		2EFEEFAF32BD7BD9C3D2DAB7 /* HHStepLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHStepLayer.m; sourceTree = "<group>"; };
 		D744BD791B44190A0073A486 /* HHSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D744BD7D1B44190A0073A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D744BD7E1B44190A0073A486 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,10 +81,10 @@
 		2EFEE6522C9A1C4D12BCBAFC /* views */ = {
 			isa = PBXGroup;
 			children = (
-				2EFEE5331758DE09FDCAE9F8 /* HHSlider.m */,
-				2EFEE377A104911768714C54 /* HHSlider.h */,
-				2EFEE9AECCC17C7C9C46299F /* HHSliderControl.h */,
-				2EFEE300DFF48539B31D8069 /* HHSliderControl.m */,
+				2EFEE5331758DE09FDCAE9F8 /* HHStepper.m */,
+				2EFEE377A104911768714C54 /* HHStepper.h */,
+				2EFEE9AECCC17C7C9C46299F /* HHStepperControl.h */,
+				2EFEE300DFF48539B31D8069 /* HHStepperControl.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -92,12 +92,12 @@
 		2EFEE7278DD62716B284FDB2 /* layers */ = {
 			isa = PBXGroup;
 			children = (
-				2EFEE06DAC7CECC48C94B7B4 /* HHSliderTrackLayer.h */,
+				2EFEE06DAC7CECC48C94B7B4 /* HHTrackLayer.h */,
 				2EFEE54E230BA2A470B12A8A /* HHCycleLayer.m */,
-				2EFEE1EF4368550BBCCCBFF8 /* HHSliderTrackLayer.m */,
+				2EFEE1EF4368550BBCCCBFF8 /* HHTrackLayer.m */,
 				2EFEE88307E7B015C90C7CAD /* HHCycleLayer.h */,
-				2EFEE5F88170A0C2976EA5DB /* HHSliderStepLayer.h */,
-				2EFEEFAF32BD7BD9C3D2DAB7 /* HHSliderStepLayer.m */,
+				2EFEE5F88170A0C2976EA5DB /* HHStepLayer.h */,
+				2EFEEFAF32BD7BD9C3D2DAB7 /* HHStepLayer.m */,
 			);
 			path = layers;
 			sourceTree = "<group>";
@@ -268,10 +268,10 @@
 				D744BD821B44190A0073A486 /* AppDelegate.m in Sources */,
 				D744BD7F1B44190A0073A486 /* main.m in Sources */,
 				2EFEEC2F39C9B541263C3259 /* HHCycleLayer.m in Sources */,
-				2EFEEE965A62E3DB2C38E182 /* HHSliderTrackLayer.m in Sources */,
-				2EFEE0E4E05CBD03931AB14A /* HHSliderStepLayer.m in Sources */,
-				2EFEE77C0E08AF57F68486D0 /* HHSlider.m in Sources */,
-				2EFEEEF1A1539F3E02D19666 /* HHSliderControl.m in Sources */,
+				2EFEEE965A62E3DB2C38E182 /* HHTrackLayer.m in Sources */,
+				2EFEE0E4E05CBD03931AB14A /* HHStepLayer.m in Sources */,
+				2EFEE77C0E08AF57F68486D0 /* HHStepper.m in Sources */,
+				2EFEEEF1A1539F3E02D19666 /* HHStepperControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

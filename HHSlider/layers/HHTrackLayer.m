@@ -3,11 +3,11 @@
 // Copyright (c) 2015 Devarajan. All rights reserved.
 //
 
-#import "HHSliderTrackLayer.h"
-#import "HHSliderControl.h"
+#import "HHTrackLayer.h"
+#import "HHStepperControl.h"
 
 
-@implementation HHSliderTrackLayer {
+@implementation HHTrackLayer {
 
 }
 - (void)drawInContext:(CGContextRef)ctx {

@@ -5,9 +5,9 @@
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
-@class HHSliderControl;
+@class HHStepperControl;
 
-@interface HHSliderStepLayer : CALayer
-@property (weak) HHSliderControl *slider;
+@interface HHStepLayer : CALayer
+@property (weak) HHStepperControl *slider;
 
 @end
