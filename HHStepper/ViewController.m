@@ -33,7 +33,7 @@
 }
 
 - (void)didSelectStepWithLabel:(NSString *)label atIndex:(NSUInteger)index {
-    NSLog(@"Selected Step %@ at Index %luu", label,(unsigned long) index);
+    NSLog(@"Selected Step %@ at Index %d", label,(int) index);
 }
 
 @end
