@@ -4,7 +4,7 @@
 //
 
 #import "HHSliderTrackLayer.h"
-#import "HHSlider.h"
+#import "HHSliderControl.h"
 
 
 @implementation HHSliderTrackLayer {

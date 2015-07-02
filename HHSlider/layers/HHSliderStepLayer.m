@@ -3,22 +3,21 @@
 // Copyright (c) 2015 Devarajan. All rights reserved.
 //
 
-#import "HHCycleLayer.h"
-#import "HHSlider.h"
+#import "HHSliderStepLayer.h"
+#import "HHSliderControl.h"
 
-
-@implementation HHCycleLayer {
+@implementation HHSliderStepLayer {
 
 }
 
 - (void)drawInContext:(CGContextRef)ctx {
-    CGRect knobFrame = CGRectInset(self.bounds, 7, 7);
+    CGRect knobFrame = CGRectInset(self.bounds, 2, 2);
     UIBezierPath *knobPath = [UIBezierPath bezierPathWithRoundedRect:knobFrame
                                                         cornerRadius: (float) (knobFrame.size.height * 1.0 / 2.0)];
 
     // 1) fill - with a subtle shadow
     CGContextSetShadowWithColor(ctx, CGSizeMake(0, 1), 1.0, [UIColor grayColor].CGColor);
-    CGContextSetFillColorWithColor(ctx, [UIColor colorWithRed:0.0 green:0.45 blue:0.94 alpha:1.0].CGColor);
+    CGContextSetFillColorWithColor(ctx, [UIColor whiteColor].CGColor);
     CGContextAddPath(ctx, knobPath.CGPath);
     CGContextFillPath(ctx);
 
@@ -56,7 +55,7 @@
     CGGradientRelease(myGradient);
     CGColorSpaceRelease(myColorspace);
     CGContextRestoreGState(ctx);
-}
 
+}
 
 @end

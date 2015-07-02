@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
-@class HHSlider;
+@class HHSliderControl;
 
 
 @interface HHCycleLayer : CALayer
 
-@property (weak) HHSlider *slider;
+@property (weak) HHSliderControl *slider;
 
 @end

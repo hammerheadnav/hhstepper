@@ -1,11 +1,11 @@
 
 
-#import "HHSlider.h"
+#import "HHSliderControl.h"
 #import "HHCycleLayer.h"
 #import "HHSliderTrackLayer.h"
 #import "HHSliderStepLayer.h"
 
-@implementation HHSlider {
+@implementation HHSliderControl {
     HHSliderTrackLayer *_trackLayer;
     NSArray *_steps;
     HHCycleLayer *_cycleLayer;
@@ -59,8 +59,12 @@
     for(NSUInteger i=0; i<_steps.count; i++){
         HHSliderStepLayer *step = _steps[i];
         if(CGRectContainsPoint(step.frame, touchPoint)){
-            selectedStep = i;
-            break;
+            if(selectedStep == i) {
+                return NO;
+            } else {
+                selectedStep = i;
+                break;
+            }
         }
     }
 
@@ -86,6 +90,10 @@
 
         [_cycleLayer addAnimation:animation forKey:@"position"];
         animating = YES;
+
+        if([_delegate respondsToSelector:@selector(didSelectStepAtIndex:)]){
+            [_delegate didSelectStepAtIndex:selectedStep];
+        }
     }
 }
 
