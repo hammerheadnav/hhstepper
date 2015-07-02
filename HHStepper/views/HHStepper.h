@@ -9,16 +9,16 @@
 
 @class Step;
 
-@protocol HHSliderDelegate <NSObject>
+@protocol HHStepperDelegate <NSObject>
 - (void)didSelectStepWithLabel:(NSString *)label atIndex:(NSUInteger)index;
 @end
 
 @interface HHStepper : UIView <HHSliderControlDelegate>
 
-@property (weak, nonatomic) id <HHSliderDelegate> delegate;
+@property (weak, nonatomic) id <HHStepperDelegate> delegate;
 @property(strong, nonatomic) NSArray *labels;
 
 - (instancetype)initWithFrame:(CGRect)frame labels:(NSArray *)labels;
 
-- (void)setDelegate:(id <HHSliderDelegate>)delegate;
+- (void)setDelegate:(id <HHStepperDelegate>)delegate;
 @end

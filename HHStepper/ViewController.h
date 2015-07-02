@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HHStepper.h"
 
-@interface ViewController : UIViewController <HHSliderDelegate>
+@interface ViewController : UIViewController <HHStepperDelegate>
 
 
 @end

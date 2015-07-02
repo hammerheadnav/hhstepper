@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class HHStepLayer;
-@protocol HHSliderDelegate;
+@protocol HHStepperDelegate;
 
 @protocol HHSliderControlDelegate <NSObject>
 - (void) didSelectStepAtIndex:(NSUInteger) index;
