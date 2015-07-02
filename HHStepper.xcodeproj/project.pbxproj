@@ -43,8 +43,8 @@
 		2EFEE88307E7B015C90C7CAD /* HHCycleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCycleLayer.h; sourceTree = "<group>"; };
 		2EFEE9AECCC17C7C9C46299F /* HHStepperControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHStepperControl.h; sourceTree = "<group>"; };
 		2EFEEFAF32BD7BD9C3D2DAB7 /* HHStepLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHStepLayer.m; sourceTree = "<group>"; };
-		D744BD791B44190A0073A486 /* HHSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D744BD7D1B44190A0073A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D744BD791B44190A0073A486 /* HHStepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHStepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D744BD7D1B44190A0073A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D744BD7E1B44190A0073A486 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D744BD801B44190A0073A486 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D744BD811B44190A0073A486 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,8 +53,8 @@
 		D744BD871B44190A0073A486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D744BD891B44190A0073A486 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D744BD8C1B44190A0073A486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D744BD921B44190A0073A486 /* HHSliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHSliderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D744BD971B44190A0073A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D744BD921B44190A0073A486 /* HHStepperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHStepperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D744BD971B44190A0073A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D744BD981B44190A0073A486 /* HHSliderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHSliderTests.m; sourceTree = "<group>"; };
 		D744BDA91B441AE70073A486 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				D744BDA91B441AE70073A486 /* QuartzCore.framework */,
-				D744BD7B1B44190A0073A486 /* HHSlider */,
-				D744BD951B44190A0073A486 /* HHSliderTests */,
+				D744BD7B1B44190A0073A486 /* HHStepper */,
+				D744BD951B44190A0073A486 /* HHStepperTests */,
 				D744BD7A1B44190A0073A486 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,13 +115,13 @@
 		D744BD7A1B44190A0073A486 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D744BD791B44190A0073A486 /* HHSlider.app */,
-				D744BD921B44190A0073A486 /* HHSliderTests.xctest */,
+				D744BD791B44190A0073A486 /* HHStepper.app */,
+				D744BD921B44190A0073A486 /* HHStepperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D744BD7B1B44190A0073A486 /* HHSlider */ = {
+		D744BD7B1B44190A0073A486 /* HHStepper */ = {
 			isa = PBXGroup;
 			children = (
 				D744BD801B44190A0073A486 /* AppDelegate.h */,
@@ -135,7 +135,7 @@
 				2EFEE7278DD62716B284FDB2 /* layers */,
 				2EFEE6522C9A1C4D12BCBAFC /* views */,
 			);
-			path = HHSlider;
+			path = HHStepper;
 			sourceTree = "<group>";
 		};
 		D744BD7C1B44190A0073A486 /* Supporting Files */ = {
@@ -147,13 +147,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D744BD951B44190A0073A486 /* HHSliderTests */ = {
+		D744BD951B44190A0073A486 /* HHStepperTests */ = {
 			isa = PBXGroup;
 			children = (
 				D744BD981B44190A0073A486 /* HHSliderTests.m */,
 				D744BD961B44190A0073A486 /* Supporting Files */,
 			);
-			path = HHSliderTests;
+			path = HHStepperTests;
 			sourceTree = "<group>";
 		};
 		D744BD961B44190A0073A486 /* Supporting Files */ = {
@@ -167,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D744BD781B44190A0073A486 /* HHSlider */ = {
+		D744BD781B44190A0073A486 /* HHStepper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D744BD9C1B44190A0073A486 /* Build configuration list for PBXNativeTarget "HHSlider" */;
+			buildConfigurationList = D744BD9C1B44190A0073A486 /* Build configuration list for PBXNativeTarget "HHStepper" */;
 			buildPhases = (
 				D744BD751B44190A0073A486 /* Sources */,
 				D744BD761B44190A0073A486 /* Frameworks */,
@@ -179,14 +179,14 @@
 			);
 			dependencies = (
 			);
-			name = HHSlider;
+			name = HHStepper;
 			productName = HHSlider;
-			productReference = D744BD791B44190A0073A486 /* HHSlider.app */;
+			productReference = D744BD791B44190A0073A486 /* HHStepper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D744BD911B44190A0073A486 /* HHSliderTests */ = {
+		D744BD911B44190A0073A486 /* HHStepperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D744BD9F1B44190A0073A486 /* Build configuration list for PBXNativeTarget "HHSliderTests" */;
+			buildConfigurationList = D744BD9F1B44190A0073A486 /* Build configuration list for PBXNativeTarget "HHStepperTests" */;
 			buildPhases = (
 				D744BD8E1B44190A0073A486 /* Sources */,
 				D744BD8F1B44190A0073A486 /* Frameworks */,
@@ -197,9 +197,9 @@
 			dependencies = (
 				D744BD941B44190A0073A486 /* PBXTargetDependency */,
 			);
-			name = HHSliderTests;
+			name = HHStepperTests;
 			productName = HHSliderTests;
-			productReference = D744BD921B44190A0073A486 /* HHSliderTests.xctest */;
+			productReference = D744BD921B44190A0073A486 /* HHStepperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -220,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D744BD741B44190A0073A486 /* Build configuration list for PBXProject "HHSlider" */;
+			buildConfigurationList = D744BD741B44190A0073A486 /* Build configuration list for PBXProject "HHStepper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -233,8 +233,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D744BD781B44190A0073A486 /* HHSlider */,
-				D744BD911B44190A0073A486 /* HHSliderTests */,
+				D744BD781B44190A0073A486 /* HHStepper */,
+				D744BD911B44190A0073A486 /* HHStepperTests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +288,7 @@
 /* Begin PBXTargetDependency section */
 		D744BD941B44190A0073A486 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D744BD781B44190A0073A486 /* HHSlider */;
+			target = D744BD781B44190A0073A486 /* HHStepper */;
 			targetProxy = D744BD931B44190A0073A486 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -395,9 +395,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HHSlider/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HHStepper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HHStepper;
 			};
 			name = Debug;
 		};
@@ -405,9 +405,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HHSlider/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HHStepper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HHStepper;
 			};
 			name = Release;
 		};
@@ -423,10 +423,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = HHSliderTests/Info.plist;
+				INFOPLIST_FILE = HHStepperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHSlider.app/HHSlider";
+				PRODUCT_NAME = HHStepperTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHStepper.app/HHStepper";
 			};
 			name = Debug;
 		};
@@ -438,17 +438,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = HHSliderTests/Info.plist;
+				INFOPLIST_FILE = HHStepperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHSlider.app/HHSlider";
+				PRODUCT_NAME = HHStepperTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHStepper.app/HHStepper";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D744BD741B44190A0073A486 /* Build configuration list for PBXProject "HHSlider" */ = {
+		D744BD741B44190A0073A486 /* Build configuration list for PBXProject "HHStepper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D744BD9A1B44190A0073A486 /* Debug */,
@@ -457,21 +457,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D744BD9C1B44190A0073A486 /* Build configuration list for PBXNativeTarget "HHSlider" */ = {
+		D744BD9C1B44190A0073A486 /* Build configuration list for PBXNativeTarget "HHStepper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D744BD9D1B44190A0073A486 /* Debug */,
 				D744BD9E1B44190A0073A486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D744BD9F1B44190A0073A486 /* Build configuration list for PBXNativeTarget "HHSliderTests" */ = {
+		D744BD9F1B44190A0073A486 /* Build configuration list for PBXNativeTarget "HHStepperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D744BDA01B44190A0073A486 /* Debug */,
 				D744BDA11B44190A0073A486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

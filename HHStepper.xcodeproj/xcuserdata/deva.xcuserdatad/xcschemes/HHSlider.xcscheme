@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D744BD781B44190A0073A486"
-               BuildableName = "HHSlider.app"
-               BlueprintName = "HHSlider"
-               ReferencedContainer = "container:HHSlider.xcodeproj">
+               BuildableName = "HHStepper.app"
+               BlueprintName = "HHStepper"
+               ReferencedContainer = "container:HHStepper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D744BD911B44190A0073A486"
-               BuildableName = "HHSliderTests.xctest"
-               BlueprintName = "HHSliderTests"
-               ReferencedContainer = "container:HHSlider.xcodeproj">
+               BuildableName = "HHStepperTests.xctest"
+               BlueprintName = "HHStepperTests"
+               ReferencedContainer = "container:HHStepper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D744BD911B44190A0073A486"
-               BuildableName = "HHSliderTests.xctest"
-               BlueprintName = "HHSliderTests"
-               ReferencedContainer = "container:HHSlider.xcodeproj">
+               BuildableName = "HHStepperTests.xctest"
+               BlueprintName = "HHStepperTests"
+               ReferencedContainer = "container:HHStepper.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D744BD781B44190A0073A486"
-            BuildableName = "HHSlider.app"
-            BlueprintName = "HHSlider"
-            ReferencedContainer = "container:HHSlider.xcodeproj">
+            BuildableName = "HHStepper.app"
+            BlueprintName = "HHStepper"
+            ReferencedContainer = "container:HHStepper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D744BD781B44190A0073A486"
-            BuildableName = "HHSlider.app"
-            BlueprintName = "HHSlider"
-            ReferencedContainer = "container:HHSlider.xcodeproj">
+            BuildableName = "HHStepper.app"
+            BlueprintName = "HHStepper"
+            ReferencedContainer = "container:HHStepper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D744BD781B44190A0073A486"
-            BuildableName = "HHSlider.app"
-            BlueprintName = "HHSlider"
-            ReferencedContainer = "container:HHSlider.xcodeproj">
+            BuildableName = "HHStepper.app"
+            BlueprintName = "HHStepper"
+            ReferencedContainer = "container:HHStepper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
