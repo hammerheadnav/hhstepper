@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController () {
-    HHStepper *slider;
+    HHStepper *stepper;
 }
 
 @end
@@ -27,9 +27,9 @@
             @"four",
             @"five"
     ];
-    slider = [[HHStepper alloc] initWithFrame:rect labels:labels];
-    [slider setDelegate:self];
-    [self.view addSubview:slider];
+    stepper = [[HHStepper alloc] initWithFrame:rect labels:labels];
+    [stepper setDelegate:self];
+    [self.view addSubview:stepper];
 }
 
 - (void)didSelectStepWithLabel:(NSString *)label atIndex:(NSUInteger)index {
